@@ -1,4 +1,4 @@
-package com.microservices.schedulemoduleservice.beans;
+package com.microservices.schedulemoduleservice.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

@@ -5,7 +5,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-import com.microservices.portmoduleservice.beans.PortDetails;
+import com.microservices.commosmodule.schudule.dto.PortDTO;
 
 //@FeignClient(name = "schedule-module-service")
 @FeignClient(name = "zuul-api-gateway-server")
@@ -13,6 +13,6 @@ import com.microservices.portmoduleservice.beans.PortDetails;
 public interface ScheduleModuleServiceClient {
 
 	@GetMapping("/schedule-module-service/schedule/port/{name}")
-	public PortDetails getPortScheduled(
+	public PortDTO getPortScheduled(
 				@PathVariable("name") final String name);
 }
