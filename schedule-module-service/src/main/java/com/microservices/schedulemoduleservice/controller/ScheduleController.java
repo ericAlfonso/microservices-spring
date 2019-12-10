@@ -10,9 +10,11 @@ import com.microservices.commosmodule.schudule.dto.PortDTO;
 import com.microservices.schedulemoduleservice.service.ScheduleService;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
 @RestController
 @RequiredArgsConstructor
+@Slf4j
 @RequestMapping("/schedule")
 public class ScheduleController {
 
@@ -20,7 +22,6 @@ public class ScheduleController {
 
 	@GetMapping("/port/{name}")
 	public ResponseEntity<PortDTO> getPortByName(@PathVariable("name") final String name) {
-
 		return ResponseEntity.ok(scheduleService.getPort(name));
 	}
 }

@@ -17,8 +17,7 @@ public class PortService {
 
 	@Transactional(readOnly = true)
 	public PortDTO getPortDetails(final String portName) {
-		return PortDTO.builder().id(12).build();
-		// return scheduleModuleServiceClient.getPortScheduled(portName);
+		return scheduleModuleServiceClient.getPortScheduled(portName);
 	}
 
 }

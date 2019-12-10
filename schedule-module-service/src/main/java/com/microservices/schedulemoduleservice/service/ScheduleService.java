@@ -15,8 +15,8 @@ import lombok.RequiredArgsConstructor;
 @Transactional
 public class ScheduleService {
 
-	private PortHibernateDAO portRepository;
-	private Environment environment;
+	private final PortHibernateDAO portRepository;
+	private final Environment environment;
 
 	@Transactional(readOnly = true)
 	public PortDTO getPort(final String portName) {
